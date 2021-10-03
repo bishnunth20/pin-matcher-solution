@@ -31,3 +31,19 @@ function (event) {
     calcInput.value = newNumber;
   }
 })
+
+
+function verifyPin() {
+  const pin = document.getElementById('display-pin').value;
+  const typedNumbers = document.getElementById('typed-numbers').value;
+  const successMessage = document.getElementById('notify-success');
+  const errorMessage = document.getElementById('notify-fail');
+  if (pin == typedNumbers) {
+    successMessage.style.display = 'block';
+    errorMessage.style.display = 'none';
+  }
+  else{
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'block';
+  }
+}
